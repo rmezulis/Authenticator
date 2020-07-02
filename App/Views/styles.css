@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=NTR&display=swap");
 
 body {
-    background-image: url("background.png");
+    background-image: url("Images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -143,27 +143,27 @@ label {
 }
 
 .name {
-    background-image: url("name-inactive.png");
+    background-image: url("Images/name-inactive.png");
 }
 
 .name:focus {
-    background-image: url("name-active.png");
+    background-image: url("Images/name-active.png");
 }
 
 .email {
-    background-image: url("email-inactive.png");
+    background-image: url("Images/email-inactive.png");
 }
 
 .email:focus {
-    background-image: url("email-active.png");
+    background-image: url("Images/email-active.png");
 }
 
 .password {
-    background-image: url("password-inactive.png");
+    background-image: url("Images/password-inactive.png");
 }
 
 .password:focus {
-    background-image: url("password-active.png");
+    background-image: url("Images/password-active.png");
 }
 
 .forgot {

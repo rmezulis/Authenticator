@@ -29,7 +29,7 @@
     <div class="profile" id="profile">
         <div class="profile-container">
             <span class="profile-title">Edit profile</span>
-            <img class="logo" src="App/Views/logo.png" alt="logo"/>
+            <img class="logo" src="App/Views/Images/logo.png" alt="logo"/>
         </div>
         <div class="break"></div>
         <form method="post" action="/profile/edit">
@@ -46,7 +46,7 @@
     <div class="attributes" id="attributes">
         <div class="new-attribute-container">
             <span class="new-attribute-title">New attribute</span>
-            <img class="logo" src="App/Views/logo.png" alt="logo"/>
+            <img class="logo" src="App/Views/Images/logo.png" alt="logo"/>
         </div>
         <div class="break"></div>
         <form method="post" action="/profile/attribute">
