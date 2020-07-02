@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=NTR&display=swap");
+
+body {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "NTR", sans-serif;
+}
+
+.authenticator {
+    display: flex;
+    flex-direction: row;
+    background: rgba(15, 26, 47, 0.9);
+    width: 924px;
+    height: 422px;
+}
+
+.container {
+    display: inherit;
+    flex-direction: row;
+    width: 924px;
+}
+
+.background {
+    display: inherit;
+    height: inherit;
+}
+
+.account,
+.new-account, .my-profile, .my-attributes {
+    padding: 20px 85px;
+    color: #ffffff;
+    height: 422px;
+    width: 292px;
+    overflow: auto;
+}
+
+.new-account, .my-attributes {
+    padding-top: 0;
+    align-self: center;
+    z-index: 0;
+}
+
+.login,
+.signup,
+.profile,
+.attributes {
+    background-color: #ffffff;
+    height: 384px;
+    min-width: 354px;
+    align-self: center;
+    position: relative;
+    padding: 40px 60px;
+    opacity: 1;
+    transition: right 1s, opacity 1s;
+}
+
+.login.fade, .profile.fade {
+    opacity: 0;
+}
+
+.login,
+.profile {
+    right: 54%;
+    z-index: 1;
+}
+
+.signup,
+.attributes {
+    opacity: 0;
+    right: 105%;
+    z-index: 0;
+}
+
+.signup.fade,
+.attributes.fade {
+    opacity: 1;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.title::after {
+    display: block;
+    content: "";
+    width: 15%;
+    height: 2px;
+    background: #49abfe;
+}
+
+.description {
+    font-size: 19px;
+}
+
+button, .button {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 45px;
+    padding: 5px 35px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-blue {
+    border: 2px solid #49abfe;
+}
+
+.button-blue:hover {
+    background: #49abfe;
+}
+
+.log-in, .save {
+    margin: 15px 0;
+    background: #f89a35;
+    border: 2px solid #f89a35;
+}
+
+.log-in:hover {
+    background: #f8bf35;
+    border-color: #f8bf35;
+}
+
+label {
+    font-size: 19px;
+}
+
+.input {
+    font-size: 19px;
+    border: none;
+    border-bottom: 1px solid #cbd2df;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.name {
+    background-image: url("name-inactive.png");
+}
+
+.name:focus {
+    background-image: url("name-active.png");
+}
+
+.email {
+    background-image: url("email-inactive.png");
+}
+
+.email:focus {
+    background-image: url("email-active.png");
+}
+
+.password {
+    background-image: url("password-inactive.png");
+}
+
+.password:focus {
+    background-image: url("password-active.png");
+}
+
+.forgot {
+    text-decoration: none;
+    color: #8495b7;
+    font-size: 19px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.login-container, .signup-container, .profile-container, .new-attribute-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    line-height: 70px;
+}
+
+.login-title, .signup-title, .profile-title, .new-attribute-title {
+    font-size: 32px;
+}
+
+.logo {
+    margin: 15px 0 25px 5px;
+}
+
+.break {
+    height: 2px;
+    width: 60px;
+    background-color: #49abfe;
+}
+
+.login-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 76px;
+    line-height: 76px;
+}
+
+.profile-info {
+    margin: 0;
+}
+
+.star {
+    color: #f44368;
+}
+
+@media only screen and (max-width: 950px) {
+    .authenticator {
+        height: max-content;
+        width: 100vw;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .background {
+        height: max-content;
+        flex-direction: column;
+    }
+
+    .account, .new-account, .my-profile, .my-attributes {
+        width: auto;
+        height: auto;
+    }
+
+    .button-blue {
+        display: none;
+    }
+
+    .login, .signup, .profile, .attributes {
+        right: 0;
+        opacity: 1;
+        height: auto;
+    }
+
+    .account, .my-profile {
+        position: relative;
+        top: 50%;
+    }
+
+    .signup, .attributes {
+        top: -30%;
+    }
+
+    .login, .profile {
+        top: 45%;
+    }
+
+    .new-account, .my-attributes {
+        position: relative;
+        top: 130%;
+        align-self: unset;
+    }
+
+
+}
+
+@media only screen and (max-width: 630px) {
+    .new-account, .my-attributes {
+        top: 130%;
+    }
+
+    .login, .profile {
+        top: 45%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .login, .signup, .profile, .attributes {
+        min-width: 90%;
+        height: auto;
+    }
+
+    .account, .my-profile {
+        top: 40%;
+        padding: 30px 10px;
+    }
+
+    .new-account, .my-attributes {
+        padding: 30px 10px;
+    }
+
+    .signup, .attributes {
+        top: -35%;
+    }
+
+    .title, .login-title, .signup-title, .profile-title, .new-attribute-title {
+        font-size: 25px;
+    }
+
+    .description, .label, .input, .forgot {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .signup, .attributes {
+        top: -30%;
+    }
+}

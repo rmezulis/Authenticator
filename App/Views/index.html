@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Register</title>
+    <meta name="description" content="The HTML5 Herald"/>
+    <meta name="author" content="SitePoint"/>
+    <link rel="stylesheet" href="App/Views/styles.css" type="text/css"/>
+</head>
+<body>
+<div class="authenticator">
+
+    <div class="container">
+    <div class="background">
+        <div class="account">
+            <p class="title">Don't have an account?</p>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <button class="button button-blue" onclick="signUp()">SIGN UP</button>
+        </div>
+        <div class="new-account">
+            <p class="title">Have an account?</p>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button class="button button-blue" onclick="logIn()">LOGIN</button>
+        </div>
+    </div>
+    <div class="login" id="login">
+        <div class="login-container">
+            <span class="login-title">Login</span>
+            <img class="logo" src="App/Views/logo.png" alt="logo"/>
+        </div>
+        <div class="break"></div>
+        <form method="post" action="/login">
+            <label for="login-email">Email<span class="star">*</span></label>
+            <input class="input email" id="login-email" type="email" name="email" required/><br/>
+            <label for="login-password">Password<span class="star">*</span></label>
+            <input class="input password" id="login-password" type="password" name="password" required/><br/>
+            <div class="login-button-container">
+                <input class="button log-in" type="submit" value="LOGIN"/>
+                <a class="forgot" href="/forgot">Forgot?</a>
+            </div>
+        </form>
+    </div>
+    <div class="signup" id="signup">
+        <div class="signup-container">
+            <span class="signup-title">Sign Up</span>
+            <img class="logo" src="App/Views/logo.png" alt="logo"/>
+        </div>
+        <div class="break"></div>
+        <form method="post" action="/register">
+            <label for="signup-name">Name<span class="star">*</span></label>
+            <input class="input name" id="signup-name" type="text" name="name" required/><br/>
+            <label for="signup-email">Email<span class="star">*</span></label>
+            <input class="input email" id="signup-email" type="email" name="email" required/><br/>
+            <label for="signup-password">Password<span class="star">*</span></label>
+            <input class="input password" id="signup-password" type="password" name="password" required/><br/>
+            <input class="button log-in" type="submit" value="SIGN UP"/>
+        </form>
+    </div>
+    </div>
+</div>
+<script>
+    function signUp() {
+        var login = document.getElementById("login");
+        var signup = document.getElementById("signup");
+        login.classList.toggle("fade");
+        login.style.right = "97%";
+        signup.classList.toggle("fade");
+        signup.style.right = "149%";
+        login.style.zIndex = "-1";
+    }
+
+    function logIn() {
+        var login = document.getElementById("login");
+        var signup = document.getElementById("signup");
+        signup.classList.toggle("fade");
+        signup.style.right = "105%";
+        login.classList.toggle("fade");
+        login.style.right = "54%";
+        login.style.zIndex = "1";
+    }
+</script>
+</body>
+</html>
